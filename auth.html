@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-auth.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCrQz7FTYx9bQlSbIeuOTT8DOm2V8HEIJ0",
+    authDomain: "test-3667f.firebaseapp.com",
+    databaseURL: "https://test-3667f.firebaseio.com",
+    projectId: "test-3667f",
+    storageBucket: "test-3667f.appspot.com",
+    messagingSenderId: "431041881472",
+    appId: "1:431041881472:web:43cffee83c3926ebc0cd65",
+    measurementId: "G-HG77GLXB2V"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+ 
+  var auth = firebase.auth();
+
+  var provider = new firebase.auth.GoogleAuthProvider();
+
+  const signInWithGoogle = () => auth.signInWithRedirect(provider);
+  		  
+  
+</script>
+<button onclick="signInWithGoogle()">Submit</button>
+
+</body>
+</html>
